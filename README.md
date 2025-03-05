@@ -20,6 +20,28 @@ En un entorno empresarial altamente competitivo, **la eficiencia en la asignaci�
 3. ¿cuánto dinero aporta cada cliente a la compañía?
 4. ¿cuándo los ingresos cubren el costo de adquisición de los clientes?
 
+### Descripción de los datos
+La tabla visits (registros del servidor con datos sobre las visitas al sitio web):
+
+- Uid: identificador único del usuario;
+- Device: dispositivo del usuario;
+- Start Ts: fecha y hora de inicio de la sesión;
+- End Ts: fecha y hora de término de la sesión;
+- Source Id: identificador de la fuente de anuncios de la que proviene el usuario.
+Todas las fechas de esta tabla están en formato AAAA-MM-DD.
+
+La tabla orders (datos sobre pedidos):
+
+- Uid: identificador único del usuario que realiza un pedido;
+- Buy Ts: fecha y hora del pedido;
+- Revenue: ingresos de Y.Afisha de este pedido.
+  
+La tabla costs (datos sobre gastos de marketing):
+
+- source_id: identificador de la fuente de anuncios
+- dt: fecha;
+- costs: gastos en esta fuente de anuncios en este día.
+
 ### Metodología
 - **Preprocesamiento de datos:** Se limpiaron y estandarizaron los datos, eliminando inconsistencias y verificando la ausencia de duplicados y valores faltantes.
 - **Analisis exploratorio de los datos (EDA):**
@@ -41,7 +63,7 @@ En un entorno empresarial altamente competitivo, **la eficiencia en la asignaci�
 
 ### Visualizaciones destacadas
 1. **Costo de adquisicion de cada una de las fuentes:** Se pudo observar que la fuente id 3, es en la que mas se ha gastado en marketing y la fuente id 4 a comparación de la 3, tiene menos gastos en marketing, mas visitantes y mas personas convertidas a clientes.
-![Tabla costos por fuente y cohorte](https://imgur.com/a/ePHkMjN).
+![Tabla costos por fuente y cohorte](https://github.com/monik719/Portafolio/blob/main/assets/costos%20marketing%20fuentes.png).
 
 2. **ROMI de la fuente 5:** En las primeras 5 cohortes se ve reflejado el retorno de la inversion, en cada una de ella. Pero enfocandonos en la cuarta esta genero hasta cuatro veces mas ganancia en varios meses de vida. pero en las demas cohortes no se reflejado la rcuperacion de la inversión.
-   ![ROMI fuente 5](https://imgur.com/a/m7nATVa)
+   ![ROMI fuente 5](https://github.com/monik719/Portafolio/blob/main/assets/fuente5.png)
